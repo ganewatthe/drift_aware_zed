@@ -25,7 +25,7 @@ SUBPROJECTS := $(foreach projname,$(PROJECTS), \
 	$(foreach archname,$(notdir $(subst /Makefile,,$(wildcard projects/$(projname)/*/Makefile))), \
 		$(projname).$(archname)))
 
-.PHONY: lib all clean clean-all $(SUBPROJECTS)
+.PHONY: lib all clean clean-all $(SUBPROJECTS) build-driftawarezed
 
 $(SUBPROJECTS):
 	$(MAKE) -C projects/$(subst .,/,$@)
@@ -40,6 +40,7 @@ all:
 
 clean:
 	$(MAKE) -C projects/ clean
+	$(MAKE) -C src/sysgen clean # drift aware library clean
 
 
 clean-all:clean
@@ -48,3 +49,10 @@ clean-all:clean
 
 ####################################################################################
 ####################################################################################
+
+# Edited by Chanaka Ganewattha
+# Added support for driftaware system build
+
+build-driftawarezed:
+	$(MAKE) -C src/sysgen
+	$(MAKE) -C projects/fmcomms2/zed

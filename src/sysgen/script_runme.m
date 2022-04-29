@@ -30,8 +30,8 @@ else
     error('Error occured during IP Generation from SystemGenerator');
 end
 
-save_system();
-close_system();
+% save_system();
+close_system('driftDetect', 0); % force close without saving
 
 fclose(fileID);
 

@@ -26,3 +26,14 @@ LIB_DEPS += util_upack
 LIB_DEPS += util_wfifo
 
 include ../../scripts/project-xilinx.mk
+
+
+# Edited by Chanaka Ganewattha for driftDetect system build
+
+.PHONY: build
+all: build
+
+VIVADO := vivado -mode batch -source
+
+build:
+	$(VIVADO) driftaware_sysgen.tcl
