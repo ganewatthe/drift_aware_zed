@@ -54,5 +54,5 @@ clean-all:clean
 # Added support for driftaware system build
 
 build-driftawarezed:
-	$(MAKE) -C src/sysgen
-	$(MAKE) -C projects/fmcomms2/zed
+	$(MAKE) -C src/sysgen # system generator IP build
+	$(MAKE) -C projects/fmcomms2/zed # zed build
