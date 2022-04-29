@@ -36,4 +36,4 @@ all: build
 VIVADO := vivado -mode batch -source
 
 build:
-	$(VIVADO) driftaware_sysgen.tcl
+	$(VIVADO) driftaware_sysgen.tcl # tcl build the drift aware system
