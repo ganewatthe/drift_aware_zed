@@ -46,6 +46,7 @@ clean:
 clean-all:clean
 	$(MAKE) -C projects/ clean
 	$(MAKE) -C library/ clean
+	$(MAKE) -C src/sysgen clean # drift aware library clean
 
 ####################################################################################
 ####################################################################################
