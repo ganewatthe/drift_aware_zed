@@ -13,3 +13,6 @@
 *.qsys text
 *.xise text
 Makefile text
+*.m
+*.mat
+*.slx
