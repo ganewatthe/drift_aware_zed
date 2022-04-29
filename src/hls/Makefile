@@ -20,7 +20,6 @@ build : clean
 	done
 
 clean : 
-	@echo -e "Building absdiff IP"
 	$(MAKE) -C absdiff clean
 	$(MAKE) -C cdf clean
 	$(MAKE) -C hist clean
